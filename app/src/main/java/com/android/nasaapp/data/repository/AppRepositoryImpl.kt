@@ -35,7 +35,6 @@ class AppRepositoryImpl (private val remoteDataSource: RemoteDataSource, private
                 }
             }
         } else {
-            val localData = appDao.getDataFromDb()
             if (!localData.isNullOrEmpty()) {
                 ResultData.Success(localData[0])
             } else {
